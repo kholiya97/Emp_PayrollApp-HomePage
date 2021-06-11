@@ -89,16 +89,16 @@ const getInputValueById = (id) => {
 
 // UC 4
 function createAndUpdateStorage(employeePayrollData) {
-    let employeePayrollList = [];
-    employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+    let employeePayrollList = [];// creating arrary of employeepayrolllist
+    employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList")); // parsing the value in json format
     if (employeePayrollList != undefined) {
-        employeePayrollList.push(employeePayrollData);
+        employeePayrollList.push(employeePayrollData);// checking value present in emprpayroll if exist pushing into local storage
     }
     else {
-        employeePayrollList = [employeePayrollData];
+        employeePayrollList = [employeePayrollData];//pushing new values in array
     }
     alert(employeePayrollList.toString());
-    localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList))
+    localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList))// seting values in local storage in json format.
 }
 
 // UC 5
